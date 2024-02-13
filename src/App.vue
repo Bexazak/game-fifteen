@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useShuffleArray } from '@/composables/useShuffleArray.js'
+import { useShuffleArray } from './composables/useShuffleArray.js'
 import IconTada from './components/icons/iconTada.vue'
 
 const matrix = ref([
