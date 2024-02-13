@@ -1,0 +1,32 @@
+{
+  "name": "game-fifteen",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:e2e": "nightwatch tests/e2e/*",
+    "test:unit": "nightwatch src/**/__tests__/*"
+  },
+  "dependencies": {
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@nightwatch/vue": "^3.1.0",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/test-utils": "^2.4.4",
+    "chromedriver": "^121.0.0",
+    "geckodriver": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "nightwatch": "^3.4.0",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "ts-node": "^10.9.2",
+    "vite": "^5.0.11",
+    "vite-plugin-nightwatch": "^0.4.6"
+  }
+}
