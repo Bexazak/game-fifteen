@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { useShuffleArray } from './composables/useShuffleArray.js'
+import { useCountUp } from './composables/useCountUp.js'
+import { useTimeFormat } from './composables/useTimeFormat.js'
 import IconTada from './components/icons/iconTada.vue'
 
 const matrix = ref([
@@ -77,9 +79,10 @@ const setMouseClickItem = (index, value) => {
 // ------------------------------
 
 let isGameOn = ref(false)
+const { count } = useCountUp(isGameOn)
 
 const startGame = () => {
-  if (!isShuffledItems.value) useShuffleArray(matrix.value)
+  // if (!isShuffledItems.value) useShuffleArray(matrix.value)
   isGameOn.value = true
   isWin.value = false
   movesCount.value = 0
@@ -103,7 +106,6 @@ const shuffleItems = () => {
 // ------------------------------
 
 let isWrongMove = ref(false)
-let gameTime = ref(0)
 let isWin = ref(false)
 let movesCount = ref(0)
 
@@ -170,7 +172,7 @@ const checkWin = () => {
           span {{ movesCount }}
         div.game_info__item
           span Game time
-          span 00:00
+          span {{ useTimeFormat(count) }}
 
       div(v-if="isShowNoticeForStartGame").game_start_notice To start the game, click the Start Game button below
 
