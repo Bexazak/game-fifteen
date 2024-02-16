@@ -1,12 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '@/views/Home.vue'
+import Results from '@/views/Results.vue'
+import About from '@/views/About.vue'
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      layout: 'GameLayout'
+    }
+  },
+  {
+    path: '/results',
+    name: 'Results',
+    component: Results,
+    meta: {
+      layout: 'DefaultLayout'
+    }
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+    meta: {
+      layout: 'DefaultLayout'
+    }
   }
 ]
 
