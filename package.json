@@ -31,5 +31,8 @@
     "vite-plugin-nightwatch": "^0.4.6",
     "vue-cli-plugin-pinia": "~0.2.4"
   },
-  "type": "module"
+  "type": "module",
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.9.6"
+  }
 }
