@@ -32,8 +32,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  base: '/game-fifteen/',
-  history: createWebHistory(),
+  history: createWebHistory('/game-fifteen/'),
   routes
 })
 
