@@ -66,7 +66,7 @@ let isGameOn = ref(false)
 const { count } = useCountUp(isGameOn)
 
 const startGame = () => {
-  if (!isShuffledItems.value) useShuffleArray(matrix.value)
+  // if (!isShuffledItems.value) useShuffleArray(matrix.value)
   isGameOn.value = true
   isWin.value = false
   movesCount.value = 0
