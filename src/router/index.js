@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 import Home from '@/views/Home.vue'
 import Results from '@/views/Results.vue'
@@ -28,11 +28,15 @@ const routes = [
     meta: {
       layout: 'DefaultLayout'
     }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: { name: 'Home' }
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory('/game-fifteen/'),
+  history: createWebHashHistory('/game-fifteen/'),
   routes
 })
 
