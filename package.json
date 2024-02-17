@@ -1,6 +1,7 @@
 {
   "name": "game-fifteen",
-  "version": "0.0.0",
+  "homepage": "https://bexazak.github.io/game-fifteen",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "vite build",
