@@ -1,5 +1,6 @@
 import { ref, watch } from 'vue'
-export function useCountUp(isGameOn) {
+
+export function useCountUp(isStart) {
   const count = ref(0)
   let timer = null
 
@@ -13,7 +14,7 @@ export function useCountUp(isGameOn) {
     count.value = 0
   }
 
-  watch(isGameOn, val => {
+  watch(isStart, val => {
     if (val) start()
     else stop()
   })

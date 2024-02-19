@@ -1,0 +1,101 @@
+.game {
+  &_place {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 430px;
+
+    .game_place__item {
+      width: 100px;
+      height: 100px;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #2c3e50;
+      flex-direction: column;
+      transition: background-color .3s;
+      border-radius: 5px;
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &--hovered {
+        background-color: #B2DFDB;
+      }
+
+      &--wrong {
+        background-color: #FF5252;
+        color: #f0f0f0;
+      }
+    }
+  }
+
+  &_panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #00695C;
+    border-radius: 6px;
+    background-color: rgba(0, 105, 92, .3);
+  }
+
+  &_info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &_settings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &_start_notice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    color: #ffffff;
+  }
+
+  &_won {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &__icon {
+      max-width: 100px;
+      animation: tada 1s 10;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    &__results {
+      padding: 0 3px;
+      font-size: 14px;
+    }
+  }
+}

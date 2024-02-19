@@ -1,13 +1,12 @@
 <script setup>
-import { onMounted } from 'vue'
 import { useResultsStore } from '@/stores/results'
 import IconPlay from '@/components/icons/iconPlay.vue'
-
-const store = useResultsStore()
+import { onMounted } from 'vue'
+import { useTimeFormat } from '@/composables/useTimeFormat.js'
+const resultStore = useResultsStore()
 
 onMounted(() => {
-  store.getResult()
-  console.log(process.env.NODE_ENV)
+  resultStore.getResult()
 })
 
 </script>
@@ -17,23 +16,23 @@ onMounted(() => {
     div.header_results
       h1 Your results
       router-link(
-        v-if="store.results.length"
+        v-if="resultStore.results.length"
         :to="{ name: 'Home' }"
       ).v-btn.v-btn--primary
         i.v-icon
           IconPlay
         | Start new game
 
-    table(v-if="store.results.length")
+    table(v-if="resultStore.results.length")
       thead
         tr
           th Date
           th Time
           th Moves
       tbody
-        tr(v-for="result in store.results" :key="result.date")
+        tr(v-for="result in resultStore.results" :key="result.date")
           td {{ result.date }}
-          td {{ result.time }}
+          td {{ useTimeFormat(result.time) }}
           td {{ result.moves }}
 
     div(v-else).empty_results
@@ -58,9 +57,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  h1 {
-    margin: 0;
-  }
+  h1,
   .v-btn {
     margin: 0;
   }

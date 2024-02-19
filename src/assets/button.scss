@@ -1,0 +1,31 @@
+.v-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  min-height: 48px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &--green {
+    background-color: hsla(160, 100%, 37%, 1);
+  }
+  &--red {
+    background-color: #EF5350;
+  }
+  &--blue {
+    background-color: #42A5F5;
+  }
+
+  .v-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.7em;
+  }
+}
