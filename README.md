@@ -1,14 +1,25 @@
-# game-fifteen
+# Fifteen Puzzle Game
 
-This template should help get you started developing with Vue 3 in Vite.
+### Stack
+- Vue3, Composition API
+- Vite
+- Pinia
+- Vue Router 4
 
-## Recommended IDE Setup
+## Description
+The Fifteen Puzzle is a classic sliding puzzle game consisting of a grid of numbered squares with one square missing. The goal of the game is to rearrange the tiles by sliding them into the empty space, with the aim of achieving numerical order from 1 to 15.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![Fifteen Puzzle Game](https://bexazak.github.io/game-fifteen/assets/15-Puzzle_solved-Gh9qZFoK.png)
 
-## Customize configuration
+## Rules:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+The game board consists of a 4x4 grid with 15 numbered tiles and one empty space.
+Tiles can only be moved horizontally or vertically into the empty space.
+To move a tile, click or tap on it if it's adjacent to the empty space. The tile will then slide into the empty space.
+Continue sliding tiles until they are arranged in numerical order from 1 to 15, with the empty space in the bottom-right corner.
+The game may have variations and additional features, but these are the basic rules of the Fifteen Puzzle.
+
+## [Demo](https://bexazak.github.io/game-fifteen/)
 
 ## Project Setup
 
@@ -26,27 +37,4 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Run End-to-End Tests with [Nightwatch](https://nightwatchjs.org/)
-
-```sh
-# When using CI, the project must be built first.
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chrome
-npm run test:e2e -- --env chrome
-# Runs the tests of a specific file
-npm run test:e2e -- tests/e2e/example.js
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-    
-### Run Headed Component Tests with [Nightwatch Component Testing](https://nightwatchjs.org/guide/component-testing/introduction.html)
-  
-```sh
-npm run test:unit
-npm run test:unit -- --headless # for headless testing
 ```
