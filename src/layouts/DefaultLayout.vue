@@ -4,7 +4,7 @@ import Footer from '@/components/Footer.vue'
 
 defineOptions({
   name: 'DefaultLayout',
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 
 </script>
@@ -14,4 +14,5 @@ defineOptions({
   div.wrapper.wrapper_content
     slot
   Footer
+
 </template>

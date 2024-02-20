@@ -26,6 +26,16 @@
   }
 }
 
+
+@media (max-width: 960px) {
+  .wrapper {
+    &_game {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
 a,
 .green {
   text-decoration: none;

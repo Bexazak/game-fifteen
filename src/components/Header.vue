@@ -6,7 +6,7 @@ import IconGithub from '@/components/icons/iconGithub.vue'
 const menuItems = reactive([
   { title: 'Play game', routeName: 'Home' },
   { title: 'Results', routeName: 'Results' },
-  { title: 'About', routeName: 'About' }
+  { title: 'Rules', routeName: 'Rules' }
 ])
 
 </script>
