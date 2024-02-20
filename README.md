@@ -1,4 +1,4 @@
-# Fifteen Puzzle Game [Demo](https://bexazak.github.io/game-fifteen/)
+# Fifteen Puzzle Game <br> [Demo](https://bexazak.github.io/game-fifteen/)
 
 ## Stack
 - Vue3, Composition API
