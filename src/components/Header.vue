@@ -62,6 +62,11 @@ const menuItems = reactive([
     a {
       margin-left: 1em;
       text-decoration: none;
+      &:first-child {
+        @media (max-width: 960px) {
+          margin-left: 0;
+        }
+      }
     }
   }
 }
