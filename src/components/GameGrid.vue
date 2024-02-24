@@ -65,7 +65,8 @@ const moveItem = (index, value, emptyIndex) => {
 const checkWin = () => {
   const currentMatrix = gameStore.matrix?.map(item => item.value)
   const winMatrix = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, null]
-  gameStore.setIsWin(JSON.stringify(currentMatrix) === JSON.stringify(winMatrix))
+
+  gameStore.setIsWin(currentMatrix.join() === winMatrix.join())
 
   if (gameStore.isWin) {
     resultsStore.addResult({
